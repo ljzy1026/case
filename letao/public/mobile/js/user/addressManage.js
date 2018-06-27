@@ -1,7 +1,3 @@
-/**
- * ITCAST WEB
- * Created by zhousg on 2017/1/2.
- */
 $(function(){
     /*渲染*/
     var cityPicker = new mui.PopPicker({layer:3});

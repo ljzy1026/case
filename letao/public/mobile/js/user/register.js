@@ -1,7 +1,3 @@
-/**
- * ITCAST WEB
- * Created by zhousg on 2017/1/2.
- */
 $(function(){
     $('body').on('tap','.btn_register',function(){
 

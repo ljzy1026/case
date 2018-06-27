@@ -6,9 +6,9 @@ $(function(){
             page:currPage,
             pageSize:5
         },function(data){
-            /*渲染列表*/
+
             $('tbody').html(template('list',data));
-            /*渲染分页*/
+
             setPaginator(data.page,Math.ceil(data.total/data.size),render);
         });
     };
@@ -19,15 +19,14 @@ $(function(){
         $('.pagination').bootstrapPaginator({
             /*当前使用的是3版本的bootstrap*/
             bootstrapMajorVersion:3,
-            /*配置的字体大小是小号*/
+
             size:'small',
-            /*当前页*/
+   
             currentPage:pageCurr,
-            /*一共多少页*/
+          
             totalPages:pageSum,
-            /*点击页面事件*/
+       
             onPageClicked:function(event, originalEvent, type, page){
-                /*改变当前页再渲染 page当前点击的按钮的页面*/
                 currPage = page;
                 callback && callback();
             }

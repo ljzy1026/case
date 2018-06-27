@@ -17,17 +17,11 @@ $(function () {
     var setPaginator = function (pageCurr, pageSum, callback) {
         /*获取需要初始的元素 使用bootstrapPaginator方法*/
         $('.pagination').bootstrapPaginator({
-            /*当前使用的是3版本的bootstrap*/
             bootstrapMajorVersion: 3,
-            /*配置的字体大小是小号*/
             size: 'small',
-            /*当前页*/
             currentPage: pageCurr,
-            /*一共多少页*/
             totalPages: pageSum,
-            /*点击页面事件*/
             onPageClicked: function (event, originalEvent, type, page) {
-                /*改变当前页再渲染 page当前点击的按钮的页面*/
                 currPage = page;
                 callback && callback();
             }
@@ -39,9 +33,6 @@ $(function () {
         $('#editModal').modal('show');
     });
     initUpload();
-    /*加校验*/
-    /*进行表单校验*/
-    /*扩展一个校验规则*/
     $.fn.bootstrapValidator.validators.checkNum = {
         validate:function (validate, $field, options) {
             /*获取字段对应的值*/
@@ -51,9 +42,6 @@ $(function () {
             /*必须是大于0的整数*/
             if(!/^[1-9]\d*$/.test(text)) return {valid: false, message: '请输入合法商品库存'};
             return true;
-            /*规则：如果 返回true 代ll表校验成功*/
-            /*规则：如果 返回false 代表校验失败*/
-            /*规则：如果 返回false 自定义提示  ｛valid:false,message:'提示'｝*/
         }
     }
     $.fn.bootstrapValidator.validators.checkPic = {

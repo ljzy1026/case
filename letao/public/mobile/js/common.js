@@ -1,7 +1,3 @@
-/**
- * ITCAST WEB
- * Created by zhousg on 2016/12/27.
- */
 if(!LeTao) var LeTao = {};
 /*常用地址*/
 LeTao.LOGIN_URL = '/mobile/user/login.html';

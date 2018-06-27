@@ -1,7 +1,3 @@
-/**
- * ITCAST WEB
- * Created by zhousg on 2016/12/28.
- */
 $(function(){
     mui('.mui-scroll-wrapper').scroll({
         scrollY: true, //是否竖向滚动
